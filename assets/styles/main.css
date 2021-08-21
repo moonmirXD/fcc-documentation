@@ -84,12 +84,22 @@ main .side-nav {
   background: var(--headline-color);
 }
 
+.text-highlight {
+  color: var(--button-color);
+  font-weight: bold;
+}
+
 @media only screen and (min-width: 768px) {
   .mobile-cta {
     display: none;
   }
   .main-content {
     margin: 0 2.2em;
+    padding-top: 5em;
+  }
+  header {
+    position: fixed;
+    width: 100%;
   }
   header .container {
     margin: 0 2em;
@@ -119,17 +129,22 @@ main .side-nav {
   header nav {
     display: initial;
   }
-  main {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 25% 75%;
-        grid-template-columns: 25% 75%;
+  main .main-content {
+    max-width: 100%;
+    position: absolute;
+    margin-left: 30%;
   }
   main .side-nav {
-    display: block;
     padding: 0 1.5em;
     overflow-y: scroll;
-    height: 100vh;
+    height: 100%;
+    border-right: solid;
+    border-color: rgba(0, 22, 22, 0.4);
+    max-width: 30%;
+    display: initial;
+    position: fixed;
+    left: 0;
+    top: 75px;
   }
   main .side-nav .nav-title {
     font-size: 1.5rem;
@@ -154,7 +169,7 @@ main .side-nav {
 
 @media only screen and (min-width: 1080px) {
   .main-content {
-    margin: 0 12em;
+    margin: 0 10em;
   }
   main {
     -ms-grid-columns: 20% 80%;

@@ -91,6 +91,11 @@ main {
     }
 }
 
+.text-highlight {
+    color: var(--button-color);
+    font-weight: bold;
+}
+
 @media only screen and (min-width: 768px) { 
     .mobile-cta {
         display: none;
@@ -98,18 +103,21 @@ main {
 
     .main-content {
         margin: 0 2.2em;
+        padding-top: 5em;
     }
 
+
     header {
+        position: fixed;
+        width: 100%;
         .container {
             margin: 0 2em;
             display: flex;
             justify-content: space-between;
-            
             nav ul {
                 display: flex;
                 justify-content: space-between;
-                
+        
                 li {
                     font-size: clamp(.5rem, 2.5vw, 1.5rem);
                     margin-left: 3em;
@@ -124,18 +132,31 @@ main {
 
         nav {
             display: initial;
+            // height: 100vh;
+            // position: fixed;
+            // width: 100%;
         }
     }
 
     main {
-        display: grid;
-        grid-template-columns: 25% 75%;
-
+        // display: grid;
+        // grid-template-columns: 25% 75%;
+        .main-content {
+            max-width: 100%;
+            position: absolute;
+            margin-left: 30%;
+        }
         .side-nav {
-            display: block;
             padding: 0 1.5em;
-            overflow-y: scroll;
-            height: 100vh;
+            overflow-y:scroll;
+            height: 100%;
+            border-right: solid;
+            border-color: rgba(0, 22, 22, 0.4);
+            max-width: 30%;
+            display: initial;
+            position: fixed;
+            left: 0;
+            top: 75px;
 
             .nav-title {
                 font-size: 1.5rem;
@@ -172,8 +193,13 @@ main {
 
 @media only screen and (min-width: 1080px){ 
     .main-content {
-        margin: 0 12em;
+        margin: 0 10em;
+
     }
+    .side-nav {
+
+    }
+
 
     main {
         grid-template-columns: 20% 80%;

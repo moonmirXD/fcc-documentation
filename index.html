@@ -13,15 +13,25 @@
         <a href="#" class="mobile-cta" id="mobile-menu">
           <img src="./assets/images/menu.png" alt="menu" />
         </a>
-        <a href="#" class="logo">
+        <a
+          href="https://moonmirxd.github.io/fcc-documentation/#"
+          target="_blank"
+          class="logo"
+        >
           <img src="./assets/images/Vector.png" alt="fcc logo" />
         </a>
 
         <nav>
           <ul class="nav-list">
-            <li><a href="#">Learn</a></li>
-            <li><a href="#">Docs</a></li>
-            <li><a href="#">Resources</a></li>
+            <li><a href="#introduction">Learn</a></li>
+            <li>
+              <a href="#" target="_blank">Docs</a>
+            </li>
+            <li>
+              <a href="https://www.freecodecamp.org/" target="_blank"
+                >Resources</a
+              >
+            </li>
           </ul>
         </nav>
       </div>
@@ -31,23 +41,23 @@
     <main>
       <div class="side-nav">
         <div class="container">
-          <div class="essentials-nav">
+          <div class="essentials-nav sidenav">
             <h2 class="nav-title">Essentials</h2>
             <ul class="nav-parent-list">
               <li><a href="#installation">Installation</a></li>
               <li><a href="#introduction">Introduction</a></li>
               <ul class="nav-child-list">
-                <li><a href="#">What is Vue.js?</a></li>
-                <li><a href="#">Getting Started</a></li>
+                <li><a href="#what-is-vue">What is Vue.js?</a></li>
+                <li><a href="#introduction">Getting Started</a></li>
                 <li><a href="#declarative">Declarative Rendering</a></li>
               </ul>
-              <li><a href="#">Template Syntax</a></li>
+              <li><a href="#template">Template Syntax</a></li>
               <li><a href="#">Conditional Rendering</a></li>
               <li><a href="#">Event Handling</a></li>
             </ul>
           </div>
 
-          <div class="component-nav">
+          <div class="component-nav sidenav">
             <h2 class="nav-title">Component In-Depth</h2>
             <ul class="nav-parent-list">
               <li><a href="#">Component Registration</a></li>
@@ -60,7 +70,7 @@
             </ul>
           </div>
 
-          <div class="transitions-nav">
+          <div class="transitions-nav sidenav">
             <h2 class="nav-title">Transitions & Animations</h2>
             <ul class="nav-parent-list">
               <li><a href="#">Overview</a></li>
@@ -70,7 +80,7 @@
             </ul>
           </div>
 
-          <div class="reusability-nav">
+          <div class="reusability-nav sidenav">
             <h2 class="nav-title">Reusability & Composition</h2>
             <ul class="nav-parent-list">
               <li><a href="#">Mixins</a></li>
@@ -84,6 +94,34 @@
       </div>
       <div class="main-content">
         <section class="essential-section">
+          <div class="what-is-vue" id="what-is-vue">
+            <h1 class="section-sub-title">What is Vue.js?</h1>
+            <p>
+              Vue (pronounced /vjuː/, like view) is a progressive framework for
+              building user interfaces. Unlike other monolithic frameworks, Vue
+              is designed from the ground up to be incrementally adoptable. The
+              core library is focused on the view layer only, and is easy to
+              pick up and integrate with other libraries or existing projects.
+              On the other hand, Vue is also perfectly capable of powering
+              sophisticated Single-Page Applications when used in combination
+              with <span class="text-highlight">modern tooling</span> and
+              <span>supporting libraries</span>.
+            </p>
+            <p>
+              If you’d like to learn more about Vue before diving in, we
+              <span class="text-highlight">created a video</span> walking
+              through the core principles and a sample project.
+            </p>
+
+            <p>
+              If you are an experienced frontend developer and want to know how
+              Vue compares to other libraries/frameworks, check out the
+              <span class="text-highlight"
+                >Comparison with Other Frameworks</span
+              >.
+            </p>
+          </div>
+
           <div class="installation" id="installation">
             <h1 class="section-title">Installation</h1>
             <p>
@@ -144,6 +182,51 @@
             <div class="section-overlay">
               var app = new Vue({ el: '#app', data: { message: 'Hello Vue!' } })
             </div>
+
+            <p>
+              We have already created our very first Vue app! This looks pretty
+              similar to rendering a string template, but Vue has done a lot of
+              work under the hood. The data and the DOM are now linked, and
+              everything is now reactive. How do we know? Open your browser’s
+              JavaScript console (right now, on this page) and set app.message
+              to a different value. You should see the rendered example above
+              update accordingly.
+            </p>
+
+            <p>
+              Note that we no longer have to interact with the HTML directly. A
+              Vue app attaches itself to a single DOM element (#app in our case)
+              then fully controls it. The HTML is our entry point, but
+              everything else happens within the newly created Vue instance.
+            </p>
+          </div>
+
+          <div class="template-syntax" id="template">
+            <h2 class="section-sub-title">Template Syntax</h2>
+            <hr />
+            <p>
+              Vue.js uses an HTML-based template syntax that allows you to
+              declaratively bind the rendered DOM to the underlying Vue
+              instance’s data. All Vue.js templates are valid HTML that can be
+              parsed by spec-compliant browsers and HTML parsers.
+            </p>
+
+            <p>
+              Under the hood, Vue compiles the templates into Virtual DOM render
+              functions. Combined with the reactivity system, Vue is able to
+              intelligently figure out the minimal number of components to
+              re-render and apply the minimal amount of DOM manipulations when
+              the app state changes.
+            </p>
+
+            <p>
+              If you are familiar with Virtual DOM concepts and prefer the raw
+              power of JavaScript, you can also
+              <span class="text-highlight"
+                >directly write render functions</span
+              >
+              instead of templates, with optional JSX support.
+            </p>
           </div>
         </section>
       </div>
