@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+    <title>Technical Page</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="#" class="mobile-cta" id="mobile-menu">
+          <img src="./assets/images/menu.png" alt="menu" />
+        </a>
+        <a href="#" class="logo">
+          <img src="./assets/images/Vector.png" alt="fcc logo" />
+        </a>
+
+        <nav>
+          <ul class="nav-list">
+            <li><a href="#">Learn</a></li>
+            <li><a href="#">Docs</a></li>
+            <li><a href="#">Resources</a></li>
+          </ul>
+        </nav>
+      </div>
+      <hr />
+    </header>
+
+    <main>
+      <div class="side-nav">
+        <div class="container">
+          <div class="essentials-nav">
+            <h2 class="nav-title">Essentials</h2>
+            <ul class="nav-parent-list">
+              <li><a href="#installation">Installation</a></li>
+              <li><a href="#introduction">Introduction</a></li>
+              <ul class="nav-child-list">
+                <li><a href="#">What is Vue.js?</a></li>
+                <li><a href="#">Getting Started</a></li>
+                <li><a href="#declarative">Declarative Rendering</a></li>
+              </ul>
+              <li><a href="#">Template Syntax</a></li>
+              <li><a href="#">Conditional Rendering</a></li>
+              <li><a href="#">Event Handling</a></li>
+            </ul>
+          </div>
+
+          <div class="component-nav">
+            <h2 class="nav-title">Component In-Depth</h2>
+            <ul class="nav-parent-list">
+              <li><a href="#">Component Registration</a></li>
+              <li><a href="#">Props</a></li>
+              <li><a href="#">Non-Prop Attributes</a></li>
+              <li><a href="#">Slots</a></li>
+              <li><a href="#">Project Inject</a></li>
+              <li><a href="#">Template Refs</a></li>
+              <li><a href="#">Handing Edge Cases</a></li>
+            </ul>
+          </div>
+
+          <div class="transitions-nav">
+            <h2 class="nav-title">Transitions & Animations</h2>
+            <ul class="nav-parent-list">
+              <li><a href="#">Overview</a></li>
+              <li><a href="#">Enter & Leave Transitions</a></li>
+              <li><a href="#">List Transitions</a></li>
+              <li><a href="#">State Transitions</a></li>
+            </ul>
+          </div>
+
+          <div class="reusability-nav">
+            <h2 class="nav-title">Reusability & Composition</h2>
+            <ul class="nav-parent-list">
+              <li><a href="#">Mixins</a></li>
+              <li><a href="#">Custom Directives</a></li>
+              <li><a href="#">Render Functions & JSX</a></li>
+              <li><a href="#">Plugins</a></li>
+              <li><a href="#">Filters</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="main-content">
+        <section class="essential-section">
+          <div class="installation" id="installation">
+            <h1 class="section-title">Installation</h1>
+            <p>
+              Vue.js is built by design to be incrementally adoptable. This
+              means that it can be integrated into a project multiple ways
+              depending on the requirements. There are four primary ways of
+              adding Vue.js to a project:
+            </p>
+            <ol>
+              <li>Import it as a CDN package on the page</li>
+              <li>Download the JavaScript files and host them yourself</li>
+              <li>Install it using npm</li>
+              <li>
+                Use the official CLI to scaffold a project, which provides
+                batteries-included build setups for a modern frontend workflow
+                (e.g., hot-reload, lint-on-save, and much more)
+              </li>
+            </ol>
+          </div>
+
+          <div class="introduction" id="introduction">
+            <h2 class="section-sub-title">Getting Started</h2>
+            <hr />
+            <a href="#" class="section-button">Installation</a>
+
+            <div class="section-overlay">
+              <h3>Tip</h3>
+              <p>
+                The official guide assumes intermediate level knowledge of HTML,
+                CSS, and JavaScript. If you are totally new to frontend
+                development, it might not be the best idea to jump right into a
+                framework as your first step - grasp the basics then come back!
+                Prior experience with other frameworks helps, but is not
+                required.
+              </p>
+            </div>
+            <p>
+              The easiest way to try out Vue.js is using the Hello World example
+              (opens new window). Feel free to open it in another tab and follow
+              along as we go through some basic examples.
+            </p>
+            <p>
+              The Installation page provides more options of installing Vue.
+              Note: We do not recommend that beginners start with vue-cli,
+              especially if you are not yet familiar with Node.js-based build
+              tools.
+            </p>
+          </div>
+
+          <div class="declarative-rendering" id="declarative">
+            <h2 class="section-sub-title">Declarative Rendering</h2>
+            <hr />
+            <p>
+              At the core of Vue.js is a system that enables us to declaratively
+              render data to the DOM using straightforward template syntax:
+            </p>
+
+            <div class="section-overlay">
+              var app = new Vue({ el: '#app', data: { message: 'Hello Vue!' } })
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

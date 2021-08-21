@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+:root {
+  --background-color: #fffffe;
+  --headline-color: #2B2C34;
+  --paragraph-color: #2B2C34;
+  --button-color: #6246EA;
+  --button-text-color: #FFFFFF;
+  --stroke-color: #D1D1E9;
+  --main-color: #fffffe;
+  --highlight-color: #6246EA;
+  --secondary-color: #D1D1E9;
+  --tertiary-color: #bae8e8;
+  --overlay-color: #F8F8F8;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--background-color);
+  margin: 0;
+  color: var(--paragraph-color);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  display: block;
+  border-color: var(--secondary-color);
+  margin-bottom: 2em;
+}
+
+header .container {
+  padding: .8em 1em 0 1em;
+  text-align: center;
+}
+
+header .container .mobile-cta {
+  width: 25px;
+  float: left;
+  margin-top: .5em;
+}
+
+header nav {
+  display: none;
+}
+
+main .side-nav {
+  display: none;
+}
+
+.main-content {
+  margin: 0 auto;
+  padding: .5em 1em;
+}
+
+.section-sub-title {
+  font-weight: 500;
+}
+
+.section-overlay {
+  background: var(--overlay-color);
+  padding: .5em 1em;
+  border-radius: .3 em;
+  margin-top: 2.5em;
+}
+
+.introduction .section-button {
+  margin-top: .2em;
+  background: #6246EA;
+  padding: 1em 3em;
+  color: white;
+  font-weight: 500;
+  border-radius: 5em;
+}
+
+.introduction .section-button:hover {
+  background: var(--headline-color);
+}
+
+@media only screen and (min-width: 768px) {
+  .mobile-cta {
+    display: none;
+  }
+  .main-content {
+    margin: 0 2.2em;
+  }
+  header .container {
+    margin: 0 2em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header .container nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header .container nav ul li {
+    font-size: clamp(0.5rem, 2.5vw, 1.5rem);
+    margin-left: 3em;
+  }
+  header .container nav ul li a:hover {
+    font-weight: bold;
+    border-bottom: 2px solid black;
+  }
+  header nav {
+    display: initial;
+  }
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 25% 75%;
+        grid-template-columns: 25% 75%;
+  }
+  main .side-nav {
+    display: block;
+    padding: 0 1.5em;
+    overflow-y: scroll;
+    height: 100vh;
+  }
+  main .side-nav .nav-title {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-top: 1.2em;
+    margin-bottom: 0.8em;
+  }
+  main .side-nav ul li {
+    margin-bottom: .5em;
+  }
+  main .side-nav ul li a {
+    color: var(--headline-color);
+  }
+  main .side-nav ul li a:hover {
+    font-weight: bold;
+    border-bottom: 2px solid black;
+  }
+  main .side-nav .nav-child-list li {
+    margin-left: 1.2em;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .main-content {
+    margin: 0 12em;
+  }
+  main {
+    -ms-grid-columns: 20% 80%;
+        grid-template-columns: 20% 80%;
+  }
+}
+
+@media only screen and (min-width: 1450px) {
+  .main-content {
+    margin: 0 20em;
+  }
+}
+/*# sourceMappingURL=main.css.map */
